@@ -106,7 +106,7 @@ export function Departments() {
               className="w-full px-4 py-2 rounded-lg border border-gray-300 dark:border-gray-700 bg-gray-50 dark:bg-gray-950 text-gray-900 dark:text-white focus:outline-none focus:ring-2 focus:ring-blue-600 dark:focus:ring-blue-400"
             />
             {isDropdownOpen && filteredDepartments.length > 0 && (
-              <div className="absolute z-10 w-full mt-1 bg-gray-50 dark:bg-gray-950 rounded-lg shadow-lg max-h-60 overflow-y-auto border border-gray-200 dark:border-gray-700">
+              <div className="absolute z-10 w-full mt-1 bg-gray-50 dark:bg-gray-950 rounded-lg shadow-lg max-h-60  border border-gray-200 dark:border-gray-700">
                 {filteredDepartments.map((dept) => (
                   <div
                     key={dept.id}

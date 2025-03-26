@@ -44,7 +44,7 @@ export function LandingPage() {
               </div>
             </CardContent>
             <CardFooter>
-              <Button className="w-full bg-blue-600 text-white">
+              <Button className="w-full bg-blue-600 text-white cursor-pointer">
                 View Sample QR
               </Button>
             </CardFooter>
@@ -74,7 +74,7 @@ export function LandingPage() {
               </p>
             </CardContent>
             <CardFooter>
-              <Button className="w-full bg-blue-600 text-white">
+              <Button className="w-full bg-blue-600 text-white cursor-pointer">
                 Try Demo Rating
               </Button>
             </CardFooter>
@@ -96,7 +96,7 @@ export function LandingPage() {
             <CardFooter>
               <Button
                 variant="outline"
-                className="w-full border-blue-600 text-blue-600 dark:border-blue-500 dark:text-blue-500 hover:bg-blue-50 dark:hover:bg-gray-800"
+                className="w-full border-blue-600 text-blue-600 dark:border-blue-500 dark:text-blue-500 hover:bg-blue-50 dark:hover:bg-gray-800 cursor-pointer"
               >
                 Learn More
               </Button>
