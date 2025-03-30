@@ -46,7 +46,7 @@ const mockStaffMembers: StaffData[] = [
     lastName: "Doe",
     role: "Head of Department",
     department: "Computer Science",
-    profilePic: "/images/staff/john-doe.jpg", // Example path
+    profilePic: "/src/assets/images/chen.jpg", // Example path
   },
   {
     id: 2,
@@ -55,6 +55,7 @@ const mockStaffMembers: StaffData[] = [
     lastName: "Clark",
     role: "Junior Administrator",
     department: "Computer Science",
+    profilePic: "/images/staff/john-doe.jpg", // Example path
   },
   {
     id: 3,
@@ -63,7 +64,7 @@ const mockStaffMembers: StaffData[] = [
     lastName: "Brown",
     role: "Senior Software Engineer",
     department: "Computer Science",
-    profilePic: "/images/staff/alice-brown.jpg",
+    profilePic: "/src/assets/images/sarahJohnson.jpg",
   },
   {
     id: 4,
@@ -72,6 +73,7 @@ const mockStaffMembers: StaffData[] = [
     lastName: "Sayi",
     role: "Head of Department",
     department: "Marketing",
+    profilePic: "/images/staff/john-doe.jpg", // Example path
   },
   {
     id: 5,
@@ -80,6 +82,7 @@ const mockStaffMembers: StaffData[] = [
     lastName: "Johnson",
     role: "Senior Lecturer",
     department: "Business Administration",
+    profilePic: "/images/staff/john-doe.jpg", // Example path
   },
   {
     id: 6,
@@ -88,6 +91,7 @@ const mockStaffMembers: StaffData[] = [
     lastName: "Taylor",
     role: "Department Secretary",
     department: "Information Technology",
+    profilePic: "/images/staff/john-doe.jpg", // Example path
   },
   {
     id: 7,
@@ -96,7 +100,7 @@ const mockStaffMembers: StaffData[] = [
     lastName: "Chen",
     role: "Associate Professor",
     department: "Finance",
-    profilePic: "/images/staff/robert-chen.jpg",
+    profilePic: "/src/assets/images/chen.jpg",
   },
   {
     id: 8,
@@ -105,6 +109,7 @@ const mockStaffMembers: StaffData[] = [
     lastName: "Adams",
     role: "Head Librarian",
     department: "Library",
+    profilePic: "/src/assets/images/rodrigez.jpg", // Example path
   },
 ];
 
