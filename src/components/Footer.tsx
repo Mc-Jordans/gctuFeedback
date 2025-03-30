@@ -8,7 +8,7 @@ export function Footer() {
           <img src={gctuLogo} alt="Logo" width={50} />
           <span className="text-lg font-bold text-white">GCTU Feedback</span>
         </div>
-        <div className="text-sm text-gray-600 dark:text-gray-400">
+        <div className="text-sm text-center text-gray-600 dark:text-gray-400">
           © {new Date().getFullYear()} Ghana Communication Technology
           University. All rights reserved.
         </div>
