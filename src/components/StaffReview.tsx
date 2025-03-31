@@ -3,7 +3,6 @@ import { useEffect, useState, useMemo } from "react";
 import {
   Card,
   CardHeader,
-  // CardContent,
   CardFooter,
   CardTitle,
   CardDescription,
@@ -17,6 +16,9 @@ import {
 } from "@/components/ui/dialog";
 import { Search, Star } from "lucide-react";
 import { Textarea } from "@/components/ui/textarea";
+import image1 from "/src/assets/images/chen.jpg";
+import image2 from "/src/assets/images/sarahJohnson.jpg";
+import image3 from "/src/assets/images/rodrigez.jpg";
 
 interface StaffData {
   id: number;
@@ -25,7 +27,7 @@ interface StaffData {
   lastName: string;
   role: string;
   department: string;
-  profilePic?: string; // Added optional profile picture
+  profilePic?: string;
 }
 
 interface Department {
@@ -37,7 +39,6 @@ interface StaffReviewProps {
   currentDepartment: Department | null;
 }
 
-// Updated mock data with some profile pictures
 const mockStaffMembers: StaffData[] = [
   {
     id: 1,
@@ -46,7 +47,7 @@ const mockStaffMembers: StaffData[] = [
     lastName: "Doe",
     role: "Head of Department",
     department: "Computer Science",
-    profilePic: "/src/assets/images/chen.jpg", // Example path
+    profilePic: image1,
   },
   {
     id: 2,
@@ -55,7 +56,7 @@ const mockStaffMembers: StaffData[] = [
     lastName: "Clark",
     role: "Junior Administrator",
     department: "Computer Science",
-    profilePic: "/images/staff/john-doe.jpg", // Example path
+    profilePic: undefined,
   },
   {
     id: 3,
@@ -64,7 +65,7 @@ const mockStaffMembers: StaffData[] = [
     lastName: "Brown",
     role: "Senior Software Engineer",
     department: "Computer Science",
-    profilePic: "/src/assets/images/sarahJohnson.jpg",
+    profilePic: image2,
   },
   {
     id: 4,
@@ -73,7 +74,7 @@ const mockStaffMembers: StaffData[] = [
     lastName: "Sayi",
     role: "Head of Department",
     department: "Marketing",
-    profilePic: "/images/staff/john-doe.jpg", // Example path
+    profilePic: undefined,
   },
   {
     id: 5,
@@ -82,7 +83,7 @@ const mockStaffMembers: StaffData[] = [
     lastName: "Johnson",
     role: "Senior Lecturer",
     department: "Business Administration",
-    profilePic: "/images/staff/john-doe.jpg", // Example path
+    profilePic: undefined,
   },
   {
     id: 6,
@@ -91,7 +92,7 @@ const mockStaffMembers: StaffData[] = [
     lastName: "Taylor",
     role: "Department Secretary",
     department: "Information Technology",
-    profilePic: "/images/staff/john-doe.jpg", // Example path
+    profilePic: undefined,
   },
   {
     id: 7,
@@ -100,7 +101,7 @@ const mockStaffMembers: StaffData[] = [
     lastName: "Chen",
     role: "Associate Professor",
     department: "Finance",
-    profilePic: "/src/assets/images/chen.jpg",
+    profilePic: image1,
   },
   {
     id: 8,
@@ -109,7 +110,7 @@ const mockStaffMembers: StaffData[] = [
     lastName: "Adams",
     role: "Head Librarian",
     department: "Library",
-    profilePic: "/src/assets/images/rodrigez.jpg", // Example path
+    profilePic: image3,
   },
 ];
 
@@ -360,7 +361,7 @@ function StaffCard({
   return (
     <Card className="w-full bg-gray-50 dark:bg-gray-950 border border-gray-200 dark:border-gray-800 rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-shadow duration-200">
       <CardHeader className="p-4 pb-2 flex flex-col items-center">
-        <div className="w-16 h-16 rounded-full flex items-center justify-center mb-2 overflow-hidden">
+        <div className="w-16 h-16 rounded-full flex items-center justify-center mb-2 overflow-hidden bg-blue-100 dark:bg-blue-900">
           {staff.profilePic ? (
             <img
               src={staff.profilePic}
@@ -368,23 +369,19 @@ function StaffCard({
               className="w-full h-full object-cover"
               onError={(e) => {
                 e.currentTarget.style.display = "none";
-                const nextSibling = e.currentTarget.nextElementSibling;
-                if (nextSibling instanceof HTMLElement) {
-                  nextSibling.style.display = "flex";
-                }
+                (
+                  e.currentTarget.nextElementSibling as HTMLElement
+                ).style.display = "flex";
               }}
             />
-          ) : (
-            <div className="w-full h-full bg-blue-100 dark:bg-blue-900 flex items-center justify-center text-blue-600 dark:text-blue-400 text-xl font-bold">
-              {initials}
-            </div>
-          )}
-          {/* Hidden fallback initials for image error case */}
-          {staff.profilePic && (
-            <div className="w-full h-full bg-blue-100 dark:bg-blue-900 items-center justify-center text-blue-600 dark:text-blue-400 text-xl font-bold hidden">
-              {initials}
-            </div>
-          )}
+          ) : null}
+          <div
+            className={`w-full h-full flex items-center justify-center text-blue-600 dark:text-blue-400 text-xl font-bold ${
+              staff.profilePic ? "hidden" : "flex"
+            }`}
+          >
+            {initials}
+          </div>
         </div>
         <CardTitle className="text-lg font-semibold text-center text-gray-900 dark:text-white">
           {staff.title} {staff.firstName} {staff.lastName}
