@@ -59,7 +59,7 @@ export function NavBar() {
 
       {/* Mobile Menu */}
       {isMobileMenuOpen && (
-        <div className="md:hidden bg-gray-900 backdrop-blur-md shadow-lg">
+        <div className="md:hidden dark:bg-gray-900 backdrop-blur-md shadow-lg">
           <nav className="flex flex-col items-center py-4 gap-2">
             <Link
               to="/"
