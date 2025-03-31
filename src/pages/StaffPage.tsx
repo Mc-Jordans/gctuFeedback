@@ -19,7 +19,7 @@ const departments: Department[] = [
 ];
 
 export function StaffPage() {
-  const [currentDepartment, setCurrentDepartment] = useState<Department | null>(
+  const [currentDepartment, _setCurrentDepartment] = useState<Department | null>(
     departments[0]
   );
   const [showModal, setShowModal] = useState(true);
@@ -37,6 +37,7 @@ export function StaffPage() {
     };
   }, [showModal]);
 
+  
   return (
     <div className="min-h-screen bg-gradient-to-b from-gray-100 to-gray-50 dark:from-gray-900 dark:to-gray-800 text-gray-900 dark:text-white transition-colors duration-300">
       <header className="bg-white dark:bg-gray-900 shadow-sm py-4 fixed w-full z-10">
