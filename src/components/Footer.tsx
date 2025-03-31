@@ -1,5 +1,5 @@
 import gctuLogo from "../assets/gctuLogo.png";
-
+import { Link } from "react-router-dom";
 export function Footer() {
   return (
     <footer className="bg-gray-900 dark:bg-gray-900 py-8 border-t border-gray-200 dark:border-gray-700">
@@ -11,6 +11,7 @@ export function Footer() {
         <div className="text-sm text-center text-gray-600 dark:text-gray-400">
           © {new Date().getFullYear()} Ghana Communication Technology
           University. All rights reserved.
+          <Link to="/departments/staffs">R</Link>
         </div>
       </div>
     </footer>
